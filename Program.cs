@@ -13,12 +13,10 @@ namespace assignment_deck_of_cards
       c1.Print();
 
       Deck d1 = new Deck();
-
-      for (var i = 0; i < d1.c.Count; i++){
-        d1.c[i].Print();
-      }
-
-
+      d1.Print();
+      d1.Shuffle();
+      h.p("\n");
+      d1.Print();
     }
   }
 }
