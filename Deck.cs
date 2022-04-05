@@ -32,7 +32,7 @@ namespace assignment_deck_of_cards
     {
       List<Card> b = new List<Card>();
       Random rand = new Random();
-      int il = this.c.Count; 
+      int il = this.c.Count;
       for (int i = 0; i < il; i++)
       {
         b.Insert(0, this.c[rand.Next(0, this.c.Count)]);
@@ -44,8 +44,28 @@ namespace assignment_deck_of_cards
       return this.c;
     }
 
-    
+    public Card Deal()
+    {
 
+      Card a = new Card(this.c[0].Name, this.c[0].Suit, this.c[0].Value);
+
+      this.c.RemoveAt(0);
+      
+      return a;
+    }
+
+    public Deck Reset(){
+
+      Deck a = new Deck();
+
+      this.c = a.c;
+      return this; 
+    }
+
+    public int Count(){
+      h.p(this.c.Count);
+      return this.c.Count; 
+    }
 
   }
 }
